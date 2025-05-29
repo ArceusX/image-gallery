@@ -1,0 +1,32 @@
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 7px;
+    padding: 16px min(24px, 2.5%);
+    background-color: rgb(251, 251, 203);
+}
+
+.navbar-logo {
+    font-style: italic;
+    font-size: 24px;
+    color: red;
+    text-decoration: none;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 40px;
+    margin-right: 4%;
+
+    .navbar-link {
+        color: black;
+        text-decoration: none;
+        font-size: 20px;
+    }
+
+    .navbar-link:hover {
+        text-decoration: underline;
+    }
+}

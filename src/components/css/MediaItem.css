@@ -1,0 +1,11 @@
+.media-container {
+    max-width: 740px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    .media-video {
+        position: relative;
+        max-height: 360px;
+    }
+}

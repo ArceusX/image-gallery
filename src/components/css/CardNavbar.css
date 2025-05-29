@@ -1,0 +1,24 @@
+.media-nav-bar {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+
+    .nav-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 12px;
+        color: white;
+        font-size: 20px;
+        text-decoration: none;
+        border-radius: 7px;
+        transition: transform 0.2s ease;
+    }
+
+    .nav-section:hover {
+        transform: scale(1.05);
+    }
+}

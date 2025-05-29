@@ -1,0 +1,7 @@
+.media-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    margin-bottom: 16px;
+}
