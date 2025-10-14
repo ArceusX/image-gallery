@@ -1,8 +1,13 @@
-h3 {
-    font-weight: normal;
+.contact-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px; /* Creates space between the title and address */
 }
+
 .address {
-    font-weight: bold;
+    font-weight: normal;
+    font-size: 1rem;
+    color: #555;
 }
 
 form {
@@ -14,12 +19,11 @@ form {
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-input[type="text"],
-input[type="email"],
+input,
 textarea {
     width: 100%;
     padding: 12px 16px;
-    margin-bottom: 12px;
+    margin: 0 0 12px;
     border: 1.5px solid #ccc;
     border-radius: 7px;
     font-size: 18px;
@@ -29,8 +33,7 @@ textarea {
     letter-spacing: .8px;
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
+input:focus,
 textarea:focus {
     border-color: #4a90e2;
     outline: none;

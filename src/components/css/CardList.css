@@ -1,7 +1,12 @@
-.media-list {
+.card-list {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 48px;
-    margin-bottom: 16px;
+    justify-content: center;
+    gap: 28px;
+    margin: 40px auto;
+}
+
+.no-items-message {
+    margin: 10px 0;
 }

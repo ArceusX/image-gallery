@@ -1,57 +1,62 @@
+import React, { useState, useCallback } from 'react';
+import useLanguageStore from '../store/languageStore';
 import './css/MediaCard.css';
-
 import MediaItem from './MediaItem';
 import { formatDate } from '../utils/format';
+import { getColor } from '../utils/colors';
+import { getEmoji } from '../utils/getEmoji';
 
-const MediaCard = ({ item, isModal, openModal, closeModal, onNext, onPrev }) => {
-  const anchorId = `card-${item.date.replaceAll("-", "")}`;
+/**
+ * A card for displaying media content. Includes an expandable description and a modal for a larger view.
+ * 
+ * @param {object} item - The media item to display.
+ * @param {number} index - The index of the card, used for styling.
+ * @param {string} anchorId - The ID for the card's anchor link.
+ * @param {boolean} isModal - Whether the card is currently in modal view.
+ * @param {function} openModal - Function to open the modal.
+ * @param {function} closeModal - Function to close the modal.
+ * @param {function} onNext - Function to navigate to the next item in the modal.
+ * @param {function} onPrev - Function to navigate to the previous item in the modal.
+ * @returns {JSX.Element} The rendered media card.
+ */
+
+const MediaCard = ({ item, index, anchorId, openModal, showMedia }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const language = useLanguageStore((state) => state.language);
+
+  const tags = [...new Set(item.tags)];
+
+  const toggleText = useCallback((e) => {
+    e.stopPropagation();
+    setIsExpanded((prev) => !prev);
+  }, []);
 
   return (
-    <>
-      {/* Main Card */}
-      <div className="media-card" id={anchorId} onClick={openModal}>
-        <MediaItem item={item} isModal={false} />
-        <div className="card-text">
-          <h2>📋 {formatDate(item.date)}</h2>
+    <div className="media-card" id={anchorId} onClick={openModal}>
+      {/* Use first file as thumbnail */}
+      {(showMedia || isExpanded) &&
+      <MediaItem item={item.files[0]} isModal={false} />}
+
+      <div className="card-text">
+        <h2 style={{ backgroundColor: getColor(index) }}>
+          {getEmoji(item.date)} {formatDate(item.date, language.code)}
+        </h2>
+        <div className="title-line">
           <h1>{item.title}</h1>
-          <p>{item.text}</p>
+          <button onClick={toggleText} className="toggle-text-button">
+            {isExpanded ? '−' : '+'}
+          </button>
         </div>
+        {isExpanded && <p>{item.text}</p>}
       </div>
 
-      {/* Modal. Overlayed over page */}
-      {isModal && (
-        <div className="media-overlay" onClick={closeModal}>
-          <div className="media-modal" onClick={(e) => e.stopPropagation()}>
-            <button className="close-button" onClick={closeModal}>✕</button>
-            <MediaItem item={item} isModal={true} />
-            {item.type === 'image' && (
-              <>
-                <button
-                  className="nav-prev-button"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    onPrev();
-                  }}
-                >
-                  &lt;
-                </button>
-                <button
-                  className="nav-next-button"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    onNext();
-                  }}
-                >
-                  &gt;
-                </button>
-              </>
-            )}
-
-          </div>
-        </div>
-      )}
-    </>
+      <div className="media-tags">
+        {tags && tags.map((tag) => (
+          <span key={tag} className="tag-box">{tag}</span>
+        ))}
+      </div>
+    </div>
   );
 };
 
-export default MediaCard;
+export default React.memo(MediaCard);

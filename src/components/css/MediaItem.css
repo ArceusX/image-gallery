@@ -1,5 +1,5 @@
 .media-container {
-    max-width: 740px;
+    width: 100%;
     position: relative;
     display: flex;
     justify-content: center;

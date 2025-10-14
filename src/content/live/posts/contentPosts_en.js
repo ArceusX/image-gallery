@@ -1,12 +1,39 @@
-import mediaFiles from '../utils/importMedia';
-
-// Each entry in [] is post that contains various metadata and items []
-// Each entry in items [] is any of 
-//      A. text, paired with content,
-//      B. image, paired with src file, alt text, and caption
-//      C. video, pair with src and flag marking src as being local or web
-
-const samplePosts = [
+/**
+ * @file contentPosts_en.js
+ * @description English content for blog posts.
+ *
+ * This file defines the content for the blog posts in English.
+ * The structure is an array of post objects. Each object represents a single blog post.
+ *
+ * Each post object has the following properties:
+ *
+ * - `id` (number): A unique identifier for the post.
+ * - `author` (string): The name of the post's author.
+ * - `date` (string): The publication date in "YYYY-MM-DD" format.
+ * - `title` (string): The main title of the post.
+ * - `subtitle` (string): The subtitle that appears below the main title.
+ * - `tags` (string[]): An array of strings for filtering and categorization.
+ * - `items` (object[]): An array of content blocks that make up the body of the post.
+ *
+ * The `items` array can contain objects of different types:
+ *
+ * 1. type: 'text'
+ *    - Renders a paragraph of text.
+ *    - `content` (string): The text content.
+ *
+ * 2. type: 'image'
+ *    - Renders an image with a caption.
+ *    - `src` (string): The image source from `mediaFiles`.
+ *    - `alt` (string): The alternative text for the image.
+ *    - `caption` (string): The caption displayed below the image.
+ *
+ * 3. type: 'video'
+ *    - Renders a video player with a caption.
+ *    - `src` (string): The video source (URL or local file).
+ *    - `caption` (string): The caption displayed below the video.
+ */
+import mediaFiles from '@utils/importMedia';
+const contentPosts_en = [
   {
     id: 1,
     author: "Jane Doe",
@@ -53,10 +80,10 @@ const samplePosts = [
   {
     id: 3,
     author: "Emily Green",
-    date: "2025-25-25",
+    date: "2025-10-25",
     title: "Beginner's Guide to Meditation",
     subtitle: "Start your mindfulness journey",
-    tags: ["meditation"],
+    tags: ["meditation", ],
     items: [
       {
         type: "video",
@@ -73,4 +100,4 @@ const samplePosts = [
   },
 ];
 
-export default samplePosts;
+export default contentPosts_en;

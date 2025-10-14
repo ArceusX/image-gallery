@@ -1,3 +1,7 @@
+html {
+  overflow-y: scroll;
+}
+
 :root {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -5,7 +9,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: rgba(235, 245, 255, 1);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -23,6 +27,7 @@ a:hover {
 }
 
 body {
+  background-color: #dceefb;
   margin: 0;
   display: flex;
   place-items: center;
@@ -47,7 +52,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border: 1px solid lightblue;
 }
 button:focus,
 button:focus-visible {

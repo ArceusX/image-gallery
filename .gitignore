@@ -37,3 +37,6 @@ pnpm-debug.log*
 Thumbs.db
 
 notes.txt
+
+src/assets/banner.jpeg
+src/assets/appIcon.png

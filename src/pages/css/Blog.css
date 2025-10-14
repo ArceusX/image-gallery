@@ -1,12 +1,29 @@
 h2 {
-  font-size: 24px;
-  font-weight: 600;
-  margin-bottom: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.blog-filter-container {
+    width: 430px;
+    display: flex;
+    flex-direction: column;
+    min-height: 120px;
+    gap: 10px;
+    margin: 20px auto;
+    background-color: #e6f9e6;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.nav-input {
+    padding: 10px;
 }
 
 .blog-list {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 24px;
+    width: 660px;
+    margin: 0 auto;
+    margin-top: 30px;
 }

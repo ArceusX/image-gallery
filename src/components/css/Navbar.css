@@ -4,29 +4,86 @@
     align-items: center;
     justify-content: space-between;
     border-radius: 7px;
-    padding: 16px min(24px, 2.5%);
-    background-color: rgb(251, 251, 203);
+    padding: 0;
+    background-color: rgba(235, 245, 255, 1);
+    position: relative; /* Needed for absolute positioning of the mobile menu */
+    height: 60px;
 }
 
 .navbar-logo {
-    font-style: italic;
     font-size: 24px;
+    font-weight: bold;
     color: red;
-    text-decoration: none;
+    display: flex;
+    align-items: center;
+    height: 100%; /* Ensure the logo container also fills the height */
+}
+
+.navbar-icon {
+    margin-right: 15px;
+}
+
+img.navbar-icon {
+    height: 100%;
+    display: block;
+}
+
+.menu-container {
+    position: relative;
+    margin-right: 30px;
 }
 
 .navbar-links {
     display: flex;
     gap: 40px;
-    margin-right: 4%;
-
-    .navbar-link {
-        color: black;
-        text-decoration: none;
-        font-size: 20px;
-    }
-
-    .navbar-link:hover {
-        text-decoration: underline;
-    }
 }
+
+.navbar-link {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar-link:hover {
+    text-decoration: underline;
+}
+
+.hamburger-button {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.hamburger-button.visible {
+    display: block;
+}
+
+.navbar-links.hamburger-mode {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    width: 180px;
+    background-color: rgb(251, 251, 203);
+    border-radius: 7px;
+    padding: 16px;
+    gap: 16px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 100;
+}
+
+.navbar-links.hamburger-mode.open {
+    display: flex;
+}
+
+.navbar-links.hamburger-mode.open .navbar-link {
+    text-align: center;
+}
+
+.navbar-links:not(.hamburger-mode) {
+    display: flex;
+}
+

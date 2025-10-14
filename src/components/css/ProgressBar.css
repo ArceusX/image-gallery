@@ -4,26 +4,26 @@
     flex-direction: column;
     gap: 12px;
     padding: 16px;
-    border-radius: 7px;
+    border-radius: 10px;
     border: 1px solid #ddd;
-    background-color: #fff;
+    background-color: #fffaf0; /* softer warm white */
     font-family: inherit;
-    font-size: 19px;
+    font-size: 18px;
 }
 
 .progress-mission {
     font-weight: bold;
     text-decoration: underline overline;
-    color: black;
+    color: #333;
 }
 
 .progress-stats {
     font-weight: bold;
-    color: red;
+    color: #b23a48;
 
     .progress-raised {
-        font-size: 22px;
-        color: blue;
+        font-size: 20px;
+        color: #1a7f37;
         margin-right: 8px;
         font-style: italic;
     }
@@ -32,12 +32,40 @@
 .progress-bar {
     background-color: #e0e0e0;
     width: 100%;
-    height: 14px;
-    border-radius: 7px;
+    height: 20px;
+    border-radius: 10px;
     overflow: hidden;
+    position: relative;
+}
 
-    .progress-fill {
-        height: 100%;
-        background-color: #1a7f37;
-    }
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #a8e6cf, #1a7f37); /* gradient fill */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    transform-origin: left;
+    transform: scaleX(var(--progress-percent, 0));
+    transition: transform 1s ease-in-out;
+}
+
+.progress-percent {
+    color: white;
+    font-weight: bold;
+}
+
+.progress-donors {
+    color: #555;
+    font-size: 16px;
+}
+
+.goal-reached {
+    margin-top: 8px;
+    font-weight: bold;
+    color: #ff6b6b;
+    text-align: center;
 }

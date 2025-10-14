@@ -1,0 +1,85 @@
+.nav-label {
+  margin-right: 10px;
+  font-weight: bold;
+  width: 90px;
+  text-align: right;
+}
+
+.nav-input {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 300px;
+  height: 40px;
+  box-sizing: border-box;
+  font-size: 1.1rem;
+  padding: 5px;
+}
+
+.tag-filter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.search-container {
+  position: relative;
+  width: 300px;
+}
+
+.suggestions-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  z-index: 10;
+}
+
+.suggestion-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestion-item:hover {
+  background-color: #f0f0f0;
+}
+
+.selected-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-basis: 100%;
+  box-sizing: border-box;
+  min-height: 28px;
+  white-space: normal;
+  overflow-wrap: normal;
+  word-break: keep-all;
+
+  /* --- Alignment fix --- */
+  position: relative;
+  padding-left: 100px; /* width (90px) + margin-right (10px) */
+}
+
+.selected-tags .nav-label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 90px;
+  margin-right: 10px;
+  text-align: right;
+}
+
+.selected-tag {
+  display: flex;
+  align-items: center;
+  background-color: #e6f7ff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}

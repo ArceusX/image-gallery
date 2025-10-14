@@ -1,0 +1,60 @@
+import mediaFiles from '@utils/importMedia';
+
+const contentEvents_cn = [
+  {
+    id: 1,
+    date: "2025-10-12",
+    title: "主日崇拜",
+    description: "欢迎参加我们的每周崇拜，有唱诗班和詹姆斯牧师的证道。",
+    time: "上午10:00 – 上午11:30",
+    location: "主圣殿",
+    color: "#4CAF50",
+    category: "崇拜",
+    image: mediaFiles.dog,
+  },
+  {
+    id: 2,
+    date: "2025-10-15",
+    title: "查经之夜",
+    description: "深入学习罗马书。欢迎所有年龄段的人参加。",
+    time: "晚上7:00 – 晚上8:30",
+    location: "社区活动室2",
+    color: "#2196F3",
+    category: "查经",
+  },
+  {
+    id: 3,
+    date: "2025-10-19",
+    title: "青年团契聚会",
+    description: "一个为青少年和年轻人举办的充满乐趣和信仰的夜晚。",
+    time: "下午5:00 – 晚上7:00",
+    location: "青年中心",
+    color: "#9C27B0",
+    category: "青年",
+    image: mediaFiles.dog,
+  },
+  {
+    id: 4,
+    date: "2025-10-25",
+    title: "社区外展",
+    description: "志愿者们聚集在一起，向有需要的当地家庭分发食物和衣物。",
+    time: "上午9:00 – 中午12:00",
+    location: "教堂停车场",
+    color: "#FF9800",
+    category: "外展",
+    image: mediaFiles.dog,
+  },
+  {
+    id: 5,
+    date: "2025-11-01",
+    title: "万圣节崇拜",
+    description: "一个纪念圣徒和已故亲人的特别纪念仪式。",
+    time: "下午6:00 – 晚上7:30",
+    location: "主圣殿",
+    color: "#F44336",
+    category: "崇拜",
+    image: mediaFiles.dog,
+  },
+];
+
+export default contentEvents_cn;

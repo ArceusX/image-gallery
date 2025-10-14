@@ -1,0 +1,27 @@
+.contact-info-ticker {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  background-color: #e6f9e6; /* very light green */
+  border-radius: 8px;
+  padding: 10px 8px;
+}
+
+.ticker-content {
+  display: inline-block;
+}
+
+.ticker-item {
+  display: inline-block;
+  margin-right: 40px;
+}
+
+/* keyframes for horizontal scrolling */
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

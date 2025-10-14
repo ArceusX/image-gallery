@@ -1,0 +1,60 @@
+import mediaFiles from '@utils/importMedia';
+
+const contentEvents_en = [
+  {
+    id: 1,
+    date: "2025-10-12",
+    title: "Sunday Worship Service",
+    description: "Join us for our weekly worship with choir and message from Pastor James.",
+    time: "10:00 AM – 11:30 AM",
+    location: "Main Sanctuary",
+    color: "#4CAF50",
+    category: "Service",
+    image: mediaFiles.dog,
+  },
+  {
+    id: 2,
+    date: "2025-10-15",
+    title: "Bible Study Night",
+    description: "An in-depth study of the Book of Romans. Open to all ages.",
+    time: "7:00 PM – 8:30 PM",
+    location: "Community Hall Room 2",
+    color: "#2196F3",
+    category: "Bible Study",
+  },
+  {
+    id: 3,
+    date: "2025-10-19",
+    title: "Youth Fellowship Gathering",
+    description: "A fun and faith-filled evening for teens and young adults.",
+    time: "5:00 PM – 7:00 PM",
+    location: "Youth Center",
+    color: "#9C27B0",
+    category: "Youth",
+    image: mediaFiles.dog,
+  },
+  {
+    id: 4,
+    date: "2025-10-25",
+    title: "Community Outreach",
+    description: "Volunteers meet to distribute food and clothing to local families in need.",
+    time: "9:00 AM – 12:00 PM",
+    location: "Church Parking Lot",
+    color: "#FF9800",
+    category: "Outreach",
+    image: mediaFiles.dog,
+  },
+  {
+    id: 5,
+    date: "2025-11-01",
+    title: "All Saints Day Service",
+    description: "A special remembrance service honoring the saints and loved ones who passed.",
+    time: "6:00 PM – 7:30 PM",
+    location: "Main Sanctuary",
+    color: "#F44336",
+    category: "Service",
+    image: mediaFiles.dog,
+  },
+];
+
+export default contentEvents_en;
