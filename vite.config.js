@@ -5,7 +5,7 @@ import path from 'path'
 // https://vite.dev/config/
 export default defineConfig(() => {
   // VITE_CONTENT_FOLDER comes from the .env.<mode> file
-  const contentFolder = process.env.VITE_CONTENT_FOLDER || 'live';
+  const contentFolder = process.env.VITE_CONTENT_FOLDER || 'sample';
 
   return {
     plugins: [react()],
