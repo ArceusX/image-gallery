@@ -8,9 +8,9 @@ html *, body *, #root * {
 }
 
 .app-wrapper {
-  width: 780px;
+  width: 790px;
   margin: 25px auto;
-  padding: 30px 50px;
+  padding: 30px 45px;
   text-align: center;
   background-color: white;
   border-radius: 8px;
