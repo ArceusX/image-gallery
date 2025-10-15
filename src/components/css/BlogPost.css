@@ -40,7 +40,6 @@
 
 .post-content {
     border-top: 1px solid rgba(0, 128, 0, 0.2);
-    margin-top: 28px;
     font-size: 18px;
 
     .post-text {
@@ -49,6 +48,7 @@
     }
 
     .image-block, .video-block {
+        margin-top: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;

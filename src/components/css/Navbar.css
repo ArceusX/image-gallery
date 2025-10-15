@@ -1,5 +1,5 @@
 .navbar {
-    width: 100%;
+    width: 680px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -16,7 +16,7 @@
     color: red;
     display: flex;
     align-items: center;
-    height: 100%; /* Ensure the logo container also fills the height */
+    height: 100%;
 }
 
 .navbar-icon {

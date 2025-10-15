@@ -1,6 +1,6 @@
 .footer {
   display: flex;
-  width: 100%;
+  width: 680px;
   justify-content: space-between;
   align-items: center;
   background-color: #E6FFE6;
@@ -33,8 +33,6 @@
 img.footer-icon {
   vertical-align: middle;
 }
-
-
 
 .footer-right {
   justify-content: flex-end;

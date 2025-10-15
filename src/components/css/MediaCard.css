@@ -76,7 +76,7 @@
 
 .media-tags {
   display: flex;
-  gap: 8px;
+  gap: 10px;
   padding: 0 16px 16px;
   margin-top: 10px;
 }

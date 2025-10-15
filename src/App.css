@@ -9,7 +9,6 @@ html *, body *, #root * {
 
 .app-wrapper {
   width: 100%;
-  max-width: 780px;
   margin: 25px auto;
   padding: 30px 50px;
   text-align: center;

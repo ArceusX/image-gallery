@@ -58,8 +58,8 @@
   white-space: normal;
   overflow-wrap: normal;
   word-break: keep-all;
+  gap: 5px;
 
-  /* --- Alignment fix --- */
   position: relative;
   padding-left: 100px; /* width (90px) + margin-right (10px) */
 }
